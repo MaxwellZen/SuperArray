@@ -22,10 +22,10 @@ public class SuperArray {
     return element;
   }
   private void resize() {
-    String[] new = new String[data.length + 10];
+    String[] ans = new String[data.length + 10];
     for (int i = 0; i < size; i++) {
-      new[i] = data[i];
+      ans[i] = data[i];
     }
-    data = new;
+    data = ans;
   }
 }
