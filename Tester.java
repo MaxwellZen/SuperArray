@@ -16,5 +16,15 @@ public class Tester {
     for (int i = 0; i < words.size(); i++) {
       System.out.print(words.get(i));
     }
+    System.out.println("");
+    SuperArray a = new SuperArray();
+    System.out.println(a.isEmpty());
+    System.out.println(words.isEmpty());
+    System.out.println(a);
+    System.out.println(words);
+    System.out.println(words.contains("a"));
+    System.out.println(words.contains("aa"));
+    String b = null;
+    System.out.println(words.contains(b));
   }
 }

@@ -29,4 +29,21 @@ public class SuperArray {
     }
     data = ans;
   }
+  public boolean isEmpty() {
+    return size == 0;
+  }
+  public String toString(){
+    String ans = "[";
+    for (int i = 0; i < size; i++) {
+      ans += data[i];
+      if (i < size - 1) ans += ", ";
+    }
+    return ans + "]";
+  }
+  public boolean contains(String s) {
+    for (int i = 0; i < size; i++) {
+      if (data[i].equals(s)) return true;
+    }
+    return false;
+  }
 }
