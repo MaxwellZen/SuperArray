@@ -6,14 +6,15 @@ public class Tester {
       words.add(alphabet.substring(i, i+1));
     }
     for (int i = 0; i < words.size(); i++) {
-      System.out.println(words.get(i));
+      System.out.print(words.get(i));
     }
+    System.out.println("");
     for (int i = 0; i < words.size() - 1; i++) {
       words.set(i, words.get(i+1));
     }
     words.set(words.size()-1, "a");
     for (int i = 0; i < words.size(); i++) {
-      System.out.println(words.get(i));
+      System.out.print(words.get(i));
     }
   }
 }
