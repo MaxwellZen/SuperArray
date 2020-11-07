@@ -105,7 +105,7 @@ public class SuperArray {
   }
   public int lastIndexOf(String value) {
     for (int i = size - 1; i >= 0; i--) {
-      if (value.equals(data[i])) return i;
+      if (data[i].equals(value)) return i;
     }
     return -1;
   }
