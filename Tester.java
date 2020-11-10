@@ -46,5 +46,32 @@ public class Tester {
       e.printStackTrace();
     }
 
+    try {
+      System.out.println(words.get(27));
+    } catch (IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+    try {
+      System.out.println(words.set(0, "ab"));
+      System.out.println(words.set(-1, "a"));
+    } catch (IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+    try {
+      words.add(26, "a");
+      System.out.println(words);
+      words.add(30, "asdf");
+      System.out.println(words);
+    } catch (IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+    try {
+      words.remove(5);
+      System.out.println(words);
+      words.remove(-5);
+      System.out.println(words);
+    } catch (IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
   }
 }
