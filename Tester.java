@@ -1,11 +1,11 @@
 import java.util.Arrays;
 public class Tester {
   public static void main (String[] args) {
-    // SuperArray words = new SuperArray();
-    // String alphabet = "abcdefghijklmnopqrstuvwxyz";
-    // for (int i = 0; i < alphabet.length(); i++) {
-    //   words.add(alphabet.substring(i, i+1));
-    // }
+    SuperArray words = new SuperArray();
+    String alphabet = "abcdefghijklmnopqrstuvwxyz";
+    for (int i = 0; i < alphabet.length(); i++) {
+      words.add(alphabet.substring(i, i+1));
+    }
     // for (int i = 0; i < words.size(); i++) {
     //   System.out.print(words.get(i));
     // }
@@ -36,6 +36,13 @@ public class Tester {
     try {
       SuperArray test = new SuperArray(-1);
     } catch (IllegalArgumentException e){
+      e.printStackTrace();
+    }
+
+    try {
+      System.out.println(words.get(3));
+      System.out.println(words.get(-5));
+    } catch (IndexOutOfBoundsException e){
       e.printStackTrace();
     }
 

@@ -22,10 +22,15 @@ public class SuperArray {
     return true;
   }
   public String get(int index) {
-    if (index < size) return data[index];
-    else return null;
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException("Index " + index + " must be in bounds of the SuperArray");
+    }
+    return data[index];
   }
   public String set(int index, String element) {
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException("Index " + index + " must be in bounds of the SuperArray");
+    }
     String old = data[index];
     data[index] = element;
     return old;
@@ -59,6 +64,9 @@ public class SuperArray {
     size = 0;
   }
   public void add(int index, String element) {
+    if (index < 0 || index > size()) {
+      throw new IndexOutOfBoundsException("Index " + index + " must be in bounds of the SuperArray");
+    }
     if (size == data.length) resize();
     for (int i = size - 1; i >= index; i--) {
       data[i+1] = data[i];
@@ -67,6 +75,9 @@ public class SuperArray {
     size++;
   }
   public String remove(int index) {
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException("Index " + index + " must be in bounds of the SuperArray");
+    }
     if (size == data.length) resize();
     String ans = data[index];
     for (int i = index; i < size-1; i++) {
